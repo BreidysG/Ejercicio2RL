@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapidez Ocular</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>RAPIDEZ OCULAR</h1>
+        <p class="instruction">En este ejercicio, verás palabras pasar por una ranura central. El objetivo es percibir las palabras sin intentar leerlas como de costumbre.</p>
+        <p class="instruction">Recuerda que debes mantener la cabeza quieta y solo mover los ojos.</p>
+        <div id="containerInputButton" class="container-input-button">
+            <label for="speedInput">Velocidad del Recorrido (ms):</label>
+            <input type="number" id="speedInput" value="300" min="100" max="1000" step="50">
+            <button id="startButton">Iniciar</button>
+        </div>
+        <div id="timer"></div>
+        
+        <!-- Ranura central -->
+        <div id="slotContainer" class="slot-container hidden">
+            <div class="slot">
+                <div id="wordSlot"></div>
+                <div class="vertical-line"></div> <!-- Línea central -->
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
