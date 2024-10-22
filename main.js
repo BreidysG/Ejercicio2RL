@@ -1,3 +1,4 @@
+
 document.getElementById('startButton').addEventListener('click', function() {
     startTimer();
     startExercise();
@@ -95,7 +96,19 @@ let originalWords = [
     "Vuelo", "Recuerdo", "Leyenda", "Destello", "Aventura", "Oscuridad",
     "Fuego", "Infinito", "Relámpago", "Espejo", "Río", "Susurro"
 ];
+
+// Función para barajar el arreglo de palabras
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Intercambio de elementos
+    }
+    return array;
+}
+
 function startExercise() {
+    // Barajar las palabras antes de empezar el ejercicio
+    originalWords = shuffleArray(originalWords);
     
     // Ocultar instrucciones y botones
     var instructionParagraphs = document.querySelectorAll('.instruction');
@@ -113,7 +126,6 @@ function startExercise() {
     var velocidadRecorrido = parseInt(speedInput.value);
     
     // Iniciar temporizador
-    
     // Iniciar el recorrido visual
     startVisualRecorrido(velocidadRecorrido);
 }
@@ -156,4 +168,5 @@ function startTimer() {
         totalTime--;
     }, 1000);
 }
+
 
