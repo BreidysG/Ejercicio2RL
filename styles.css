@@ -110,6 +110,37 @@ button:hover {
     background-color: black;
     left: 50%;
 }
+
+/* Responsiveness for medium screens (tablets and smaller laptops) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    #timer {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .slot {
+        width: 80%;
+        height: 50px;
+    }
+
+    #wordSlot {
+        width: 80%;
+        height: 45px;
+        font-size: 25px;
+        padding: 5px 15px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
 /* Responsiveness for small screens (mobile devices) */
 @media (max-width: 480px) {
     .container {
